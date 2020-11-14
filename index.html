@@ -3,16 +3,35 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <script src="/socket.io/socket.io.js"></script>
   <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
+  <div id=playerName>
+    temp
+  </div>
     <div id=welcome>
         <label for=roomName>Room Name</label>
         <input id=roomName type=text></input>
-        <button type=button id=joinRoom onclick=joinRoom()>Join</button>
+        <button type=button id=joinRoom onclick=updateUI()>Join</button>
     </div>
+
+    <div id=buttons>
+      <div id=rock class=rps>
+          <button type=button id=rockButton onclick="selection('rock')">Rock</button>
+      </div>
+      <div id=paper class=rps>
+          <button type=button id=paperButton onclick="selection('paper')">Paper</button>
+      </div>
+      <div id=scissors class=rps>
+          <button type=button id=scissorsButton onclick="selection('scissors')">Scissors</button>
+      </div>
+      <div id=resultsLog>
+          Results
+      </div>
+  </div>
+  <div id='errorMsg'></div>
 
 
   <script src="js/script.js"></script>

@@ -16,6 +16,7 @@
     margin-right: 10px;
 }
 #buttons {
+    display: none;
     position: fixed;
     margin-left: 40%;
     margin-right: 40%;
